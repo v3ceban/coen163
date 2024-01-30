@@ -1,0 +1,42 @@
+header {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+
+  nav,
+  ul {
+    display: flex;
+  }
+
+  nav {
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      font-size: 1.2em;
+      text-decoration: underline;
+
+      li:first-of-type {
+        margin: 0 60px 0 0;
+      }
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    nav {
+      flex-direction: column;
+
+      ul {
+        margin: 40px 0 0;
+
+        li:first-of-type {
+          margin: 0 20px 0 0;
+        }
+      }
+    }
+  }
+}
