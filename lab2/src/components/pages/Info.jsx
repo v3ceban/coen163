@@ -1,33 +1,14 @@
+import info from "../content/info.js";
+
 export default function Info() {
   return (
     <main className="info">
       <h2>Information</h2>
       <section>
         <h3>What do we offer?</h3>
-        <p>
-          Waste Rewarder is a revolutionary web application designed to
-          incentivize and reward users for practicing proper waste management.
-          The platform is dedicated to targeting all types of waste, including
-          recycling, composting, and reducing overall waste production. Waste
-          Rewarder&apos;s main focus is on creating sustainable habits through
-          positive reinforcement. By offering users rewards and incentives for
-          their eco-friendly actions, the app aims to encourage long-term
-          behavior change and promote a more environmentally conscious
-          lifestyle.
-        </p>
-        <p>
-          The Waste Rewarder app utilizes a user-friendly interface to track and
-          monitor users&apos; waste management activities. Whether it&apos;s
-          recycling plastic, composting organic waste, or reducing single-use
-          items, the app provides a platform for users to log their actions and
-          earn points for their efforts. These points can then be redeemed for
-          various rewards, such as discounts at eco-friendly stores, donations
-          to environmental charities, or even tangible items like reusable
-          products. By gamifying the waste management process and offering
-          tangible rewards, Waste Rewarder aims to make sustainable living more
-          accessible and enjoyable for users, ultimately leading to a positive
-          impact on the environment.
-        </p>
+        {info.map((content, index) => (
+          <p key={index}>{content}</p>
+        ))}
       </section>
       <section>
         <h3>Who are the users?</h3>

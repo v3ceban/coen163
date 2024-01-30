@@ -1,10 +1,12 @@
+import Image from "../../garbage.png";
+
 export default function Home() {
   return (
     <main className="home">
       <h2>Welcome to Waste Rewarder!</h2>
       <section className="content">
         <h3>Who we are</h3>
-        <img src="https://placekitten.com/800/600/" alt="waste rewarder" />
+        <img src={Image} alt="waste rewarder" />
         <p>
           Waste Rewarder is a user-friendly and interactive web application that
           aims to revolutionize waste management. By providing a platform that
