@@ -3,7 +3,7 @@ export default function Info() {
     <main className="info">
       <h2>Information</h2>
       <section>
-        <h3>What do we want to offer?</h3>
+        <h3>What do we offer?</h3>
         <p>
           Waste Rewarder is a revolutionary web application designed to
           incentivize and reward users for practicing proper waste management.
@@ -56,9 +56,18 @@ export default function Info() {
       </section>
       <section>
         <h3>Resources</h3>
-        <ol>
+        <p>
+          These resources can provide valuable information and insights into
+          waste management practices, policies, and sustainable solutions that
+          can be incorporated into this web app.
+        </p>
+        <ul>
           <li>
-            <a href="https://www.epa.gov/waste" target="_blank">
+            <a
+              href="https://www.epa.gov/waste"
+              rel="noreferrer"
+              target="_blank"
+            >
               Environmental Protection Agency (EPA) - Waste Management
             </a>
             : The EPA provides comprehensive information on waste management
@@ -66,14 +75,22 @@ export default function Info() {
             businesses.
           </li>
           <li>
-            <a href="https://www.unep.org/explore-topics/waste" target="_blank">
+            <a
+              href="https://www.unep.org/explore-topics/waste"
+              rel="noreferrer"
+              target="_blank"
+            >
               United Nations Environment Programme (UNEP) - Waste Management
             </a>
             : UNEP offers reports, publications, and guidelines on sustainable
             waste management practices and policies.
           </li>
           <li>
-            <a href="https://www.waste360.com/" target="_blank">
+            <a
+              href="https://www.waste360.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
               Waste360
             </a>
             : Waste360 is a leading information, event, and education provider
@@ -81,7 +98,11 @@ export default function Info() {
             articles, and resources on waste management.
           </li>
           <li>
-            <a href="https://waste-management-world.com/" target="_blank">
+            <a
+              href="https://waste-management-world.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
               Waste Management World
             </a>
             : This online publication covers the latest news, trends, and
@@ -89,29 +110,34 @@ export default function Info() {
             insights and resources for waste management professionals.
           </li>
           <li>
-            "Waste Management and Sustainable Consumption: Reflections on
-            Consumer Waste" by Dr. Tanja Sobko: This academic article explores
-            the relationship between consumer behavior and waste management,
-            offering insights into sustainable consumption and waste reduction.
-            Available at:{" "}
-            <a href="https://www.mdpi.com/2071-1050/12/6/2363" target="_blank">
+            &quot;Waste Management and Sustainable Consumption: Reflections on
+            Consumer Waste&quot; by Dr. Tanja Sobko: This academic article
+            explores the relationship between consumer behavior and waste
+            management, offering insights into sustainable consumption and waste
+            reduction. Available at:{" "}
+            <a
+              href="https://www.mdpi.com/2071-1050/12/6/2363"
+              rel="noreferrer"
+              target="_blank"
+            >
               https://www.mdpi.com/2071-1050/12/6/2363
             </a>
           </li>
           <li>
-            "Waste Management Practices: Municipal, Hazardous, and Industrial"
-            by John Pichtel: This book provides an in-depth overview of waste
-            management practices, including municipal, hazardous, and industrial
-            waste, offering valuable insights into waste management strategies.
-            Available at:{" "}
+            &quot;Waste Management Practices: Municipal, Hazardous, and
+            Industrial&quot; by John Pichtel: This book provides an in-depth
+            overview of waste management practices, including municipal,
+            hazardous, and industrial waste, offering valuable insights into
+            waste management strategies. Available at:{" "}
             <a
               href="https://www.springer.com/gp/book/9783319749567"
+              rel="noreferrer"
               target="_blank"
             >
               https://www.springer.com/gp/book/9783319749567
             </a>
           </li>
-        </ol>
+        </ul>
       </section>
     </main>
   );

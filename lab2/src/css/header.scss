@@ -1,7 +1,14 @@
 header {
-  background: black;
-  color: white;
-  padding: 10px 20px;
+  margin: 8px;
+  padding: 20px;
+  border: 3px solid $black;
+  box-shadow: $black -3px 3px 0px;
+
+  h1 {
+    a {
+      text-decoration: none;
+    }
+  }
 
   nav,
   ul {
@@ -14,15 +21,10 @@ header {
 
     ul {
       font-size: 1.2em;
-      text-decoration: underline;
 
       li:first-of-type {
         margin: 0 60px 0 0;
       }
-    }
-
-    h1 {
-      font-size: 2em;
     }
   }
 
