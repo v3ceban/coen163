@@ -30,6 +30,13 @@ main {
       margin: 0 0 20px 0;
     }
 
+    ul,
+    ol {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
     ul {
       li {
         a {
