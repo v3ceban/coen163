@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Description from "./pages/Description";
 
-//eslint-disable-next-line
+// eslint-disable-next-line
 export default function Main({ currentMain }) {
   let content = null;
   switch (currentMain) {
