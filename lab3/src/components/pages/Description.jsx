@@ -12,7 +12,7 @@ export default function Description() {
   };
 
   return (
-    <main className="description">
+    <>
       <h2>Description</h2>
       <section>
         <h3>Definition</h3>
@@ -43,6 +43,6 @@ export default function Description() {
         </p>
         <ol>{renderList(description.operation)}</ol>
       </section>
-    </main>
+    </>
   );
 }

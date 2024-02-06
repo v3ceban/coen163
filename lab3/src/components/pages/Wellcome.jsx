@@ -6,7 +6,7 @@ export default function Welcome({ Dismiss }) {
       <p>
         Scan your trash and get rewarded in games or in online marketplaces.
         <br />
-        Register today to get <strong>100CC</strong> bonus!
+        Register today to get <strong>100 CC</strong> bonus!
       </p>
       <button onClick={Dismiss}>Get Started</button>
     </div>

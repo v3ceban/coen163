@@ -6,7 +6,8 @@ import Description from "./pages/Description";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 
-export default function Main({ currentMain }) {
+//eslint-disable-next-line
+export default function Main({ currentMain, navClick }) {
   const [showWelcome, setShowWelcome] = useState(true);
 
   const handleDismiss = () => {
@@ -28,7 +29,7 @@ export default function Main({ currentMain }) {
       case "FAQ":
         return <FAQ />;
       case "contact":
-        return <Contact />;
+        return <Contact setPage={navClick} />;
       default:
         return <Home />;
     }
@@ -37,7 +38,7 @@ export default function Main({ currentMain }) {
   return (
     <>
       {showWelcome && <Welcome Dismiss={handleDismiss} />}
-      {getPageContent()}
+      <main className={currentMain}>{getPageContent()}</main>
     </>
   );
 }

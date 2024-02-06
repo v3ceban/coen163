@@ -2,7 +2,7 @@ import Image from "../../garbage.png";
 
 export default function Home() {
   return (
-    <main className="home">
+    <>
       <h2>Welcome to Waste Rewarder!</h2>
       <section className="content">
         <h3>Who we are</h3>
@@ -18,6 +18,6 @@ export default function Home() {
           environment and be rewarded for your efforts with Waste Rewarder!
         </p>
       </section>
-    </main>
+    </>
   );
 }

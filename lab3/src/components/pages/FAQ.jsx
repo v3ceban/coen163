@@ -12,7 +12,7 @@ export default function FAQ() {
   };
 
   return (
-    <main className="FAQ">
+    <>
       <h2>Frequently asked questions</h2>
       <section>
         {faq.map((content, index) => (
@@ -27,6 +27,6 @@ export default function FAQ() {
           </article>
         ))}
       </section>
-    </main>
+    </>
   );
 }

@@ -2,7 +2,7 @@ import { info } from "../content/info.js";
 
 export default function Info() {
   return (
-    <main className="info">
+    <>
       <h2>Information</h2>
       <section>
         <h3>What do we offer?</h3>
@@ -34,6 +34,6 @@ export default function Info() {
           ))}
         </ul>
       </section>
-    </main>
+    </>
   );
 }

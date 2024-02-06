@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 
-function App() {
+export default function App() {
   const [currentMain, setMain] = useState("home");
   const navClick = (item) => {
     setMain(item);
@@ -11,9 +11,7 @@ function App() {
   return (
     <>
       <Header navClick={navClick} />
-      <Main currentMain={currentMain} />
+      <Main currentMain={currentMain} navClick={navClick} />
     </>
   );
 }
-
-export default App;

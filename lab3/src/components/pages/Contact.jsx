@@ -1,7 +1,14 @@
 import { useState } from "react";
+import Success from "./Success";
 
-export default function Contact() {
+//eslint-disable-next-line
+export default function Contact({ setPage }) {
   const [errors, setErrors] = useState({});
+  const [showSuccess, setShowSuccess] = useState(false);
+  const handleDismiss = () => {
+    setShowSuccess(false);
+    setPage("home");
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,52 +20,57 @@ export default function Contact() {
     if (!name) {
       newErrors.name = "Name is required";
     } else if (!/^[a-zA-Z\s]+$/.test(name)) {
-      newErrors.name = "Name should only contain letters and spaces";
+      newErrors.name_warn = "Name can only contain letters and spaces";
     }
 
     if (!email) {
       newErrors.email = "Email is required";
     } else if (!email.endsWith("@scu.edu")) {
-      newErrors.email = "Email should be from @scu.edu domain";
+      newErrors.email_warn = "Email should be from @scu.edu domain";
     }
 
     if (!message) {
       newErrors.message = "Message is required";
     }
 
-    setErrors(newErrors);
-
     if (Object.keys(newErrors).length === 0) {
-      console.log("Form submitted successfully");
-    } else {
-      console.log(newErrors);
+      setShowSuccess(true);
     }
+
+    setErrors(newErrors);
   };
 
   return (
-    <main className="contact">
+    <>
+      {showSuccess && <Success Dismiss={handleDismiss} />}
       <h2>Contact Us</h2>
       <section>
         <h3>Send us a message</h3>
         <form onSubmit={handleSubmit}>
           <label>
             Name:
+            {errors.name && <p className="error">{errors.name}</p>}
+            {errors.name_warn && (
+              <p className="error warning">{errors.name_warn}</p>
+            )}
             <input type="text" name="name" />
           </label>
-          {errors.name && <p className="error">{errors.name}</p>}
           <label>
             Email:
+            {errors.email && <p className="error">{errors.email}</p>}
+            {errors.email_warn && (
+              <p className="error warning">{errors.email_warn}</p>
+            )}
             <input type="email" name="email" />
           </label>
-          {errors.email && <p className="error">{errors.email}</p>}
           <label>
             Message:
+            {errors.message && <p className="error">{errors.message}</p>}
             <textarea name="message" rows="5" />
           </label>
-          {errors.message && <p className="error">{errors.message}</p>}
           <button type="submit">Submit</button>
         </form>
       </section>
-    </main>
+    </>
   );
 }

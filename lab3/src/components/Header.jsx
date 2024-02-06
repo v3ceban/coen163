@@ -1,38 +1,33 @@
 // eslint-disable-next-line
 export default function Header({ navClick }) {
-  const handleClick = (page) => {
+  const handleClick = (page, event) => {
+    event.preventDefault();
     navClick(page);
   };
+
+  const pages = [
+    { name: "info", label: "Information" },
+    { name: "description", label: "Description" },
+    { name: "FAQ", label: "FAQ" },
+    { name: "contact", label: "Contact" },
+  ];
 
   return (
     <header>
       <nav>
         <h1>
-          <a href="#" onClick={() => handleClick("home")}>
+          <a href="#" onClick={(event) => handleClick("home", event)}>
             Waste Rewarder
           </a>
         </h1>
         <ul>
-          <li>
-            <a href="#" onClick={() => handleClick("info")}>
-              Information
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => handleClick("description")}>
-              Description
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => handleClick("FAQ")}>
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => handleClick("contact")}>
-              Contact
-            </a>
-          </li>
+          {pages.map((page) => (
+            <li key={page.name}>
+              <a href="#" onClick={(event) => handleClick(page.name, event)}>
+                {page.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
