@@ -1,0 +1,52 @@
+header {
+  margin: 8px;
+  padding: 20px;
+  border: 3px solid $black;
+  box-shadow: $black -3px 3px 0px;
+
+  h1 {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  nav,
+  ul {
+    display: flex;
+  }
+
+  nav {
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      font-size: 1.2em;
+
+      li {
+        margin: 0 60px 0 0;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    nav {
+      flex-direction: column;
+
+      ul {
+        margin: 40px 0 0;
+
+        li {
+          margin: 0 20px 0 0;
+
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

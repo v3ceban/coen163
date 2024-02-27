@@ -1,0 +1,171 @@
+main {
+  padding: 20px 10% 50px;
+  line-height: 1.5em;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+
+  ul,
+  ol {
+    line-height: 1.5em;
+  }
+}
+
+.info,
+.description {
+  @media screen and (max-width: 800px) {
+    display: block;
+
+    section {
+      margin: 50px 0;
+    }
+  }
+
+  h2 {
+    grid-column: 1/3;
+  }
+
+  section {
+    p {
+      margin: 0 0 20px 0;
+    }
+
+    ul,
+    ol {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    ul {
+      li {
+        a {
+          color: blue;
+        }
+      }
+    }
+
+    &:last-of-type {
+      grid-column-end: span 2;
+    }
+  }
+}
+
+.info {
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+}
+
+.description {
+  section:first-of-type {
+    grid-column: 1/3;
+  }
+
+  section:last-of-type {
+    grid-column: 2/3;
+  }
+}
+
+.title {
+  font-weight: 700;
+  background: $yellow;
+  padding: 0 0 0 5px;
+
+  &::selection {
+    background: $purple;
+  }
+}
+
+.home,
+.FAQ,
+.contact {
+  section {
+    grid-column: 1/3;
+  }
+}
+
+.FAQ {
+  h3 {
+    font-size: 1.2em;
+    cursor: pointer;
+
+    &:hover {
+      $lpurple: lighten($purple, 5%);
+
+      background: $lpurple;
+
+      &::after {
+        background: repeating-linear-gradient(-45deg,
+            $lpurple 0px,
+            $lpurple 6px,
+            transparent 4px,
+            transparent 12px);
+        background-color: $yellow;
+      }
+    }
+
+    &.inactive {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.4em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 15px;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    border: 4px solid $black;
+    border-radius: 5px;
+    font-family: "Inconsolata", monospace;
+    padding: 5px 10px;
+    grid-column: 1/3;
+
+    &:focus {
+      background: lighten($yellow, 10%);
+      outline: none;
+    }
+
+    &::selection {
+      background: $blue;
+    }
+  }
+
+  .error {
+    background: $red;
+    border: 4px solid $black;
+    font-size: 0.8em;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 0 10px;
+    max-width: fit-content;
+    margin-bottom: -15px;
+
+    &.warning {
+      background: $yellow;
+    }
+  }
+}
